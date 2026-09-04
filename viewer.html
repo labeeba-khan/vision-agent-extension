@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy-Protected Screenshot</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <div class="viewer-page">
+    <h1>Privacy-Protected Screenshot</h1>
+    <p class="viewer-subtitle">Sensitive information has been locally redacted.</p>
+
+    <div class="image-wrap">
+      <img id="redactedImage" alt="Redacted screenshot" />
+    </div>
+
+    <!-- Shown only if something goes wrong (e.g. no saved screenshot found) -->
+    <p id="viewerStatus" class="viewer-status"></p>
+  </div>
+
+  <!-- viewer.js reads the screenshot from chrome.storage.local and shows it -->
+  <script src="viewer.js"></script>
+</body>
+</html>

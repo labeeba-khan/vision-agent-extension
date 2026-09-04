@@ -1,0 +1,224 @@
+body {
+  width: 320px;
+  font-family: Arial, sans-serif;
+  padding: 12px;
+  background-color: #fafafa;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0 0 2px 0;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #777;
+  margin: 0 0 10px 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+}
+
+.button-row + .button-row {
+  margin-top: 8px;
+}
+
+#analyzeBtn,
+#captureBtn,
+#detectBtn,
+#redactBtn,
+#redactScreenshotBtn,
+#sendSafeBtn {
+  flex: 1;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#analyzeBtn {
+  background-color: #4a6cf7;
+}
+
+#analyzeBtn:hover {
+  background-color: #3a5ce0;
+}
+
+#captureBtn {
+  background-color: #22a06b;
+}
+
+#captureBtn:hover {
+  background-color: #1c8a5c;
+}
+
+#detectBtn {
+  background-color: #e0473b;
+}
+
+#detectBtn:hover {
+  background-color: #c8392e;
+}
+
+#redactBtn {
+  background-color: #1f1f1f;
+}
+
+#redactBtn:hover {
+  background-color: #000000;
+}
+
+#redactScreenshotBtn {
+  background-color: #8347e0;
+}
+
+#redactScreenshotBtn:hover {
+  background-color: #6f36c9;
+}
+
+#sendSafeBtn {
+  background-color: #0f766e;
+}
+
+#sendSafeBtn:hover {
+  background-color: #0b5c56;
+}
+
+#screenshotContainer {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+#screenshotContainer img {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 6px;
+  display: block;
+}
+
+#results {
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+#sensitiveContainer {
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.sensitive-item {
+  border: 1px solid #f0c8c4;
+  background-color: #fff5f4;
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+}
+
+.sensitive-category {
+  display: inline-block;
+  background-color: #e0473b;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.sensitive-detail {
+  color: #555;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+#redactionContainer {
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.redaction-note {
+  color: #555;
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 0 0 6px 0;
+}
+
+#screenshotRedactionContainer {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.screenshot-compare-label {
+  font-weight: bold;
+  font-size: 11px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.screenshot-compare-label.redacted {
+  color: #8347e0;
+}
+
+#screenshotRedactionContainer img {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: block;
+}
+
+.redacted-screenshot-link {
+  cursor: pointer;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Hover feedback so it's obvious the redacted screenshot is clickable,
+   while the original screenshot above (a plain <img>, no class) gets
+   no such treatment. */
+.redacted-screenshot-link:hover {
+  border-color: #8347e0;
+  opacity: 0.9;
+}
+
+.screenshot-hint {
+  font-size: 10px;
+  color: #8347e0;
+  text-align: center;
+  margin: 4px 0 0 0;
+}
+
+#sendStatusContainer {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.placeholder {
+  color: #999;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 3px;
+  word-break: break-word;
+}

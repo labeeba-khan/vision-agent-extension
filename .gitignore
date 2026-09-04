@@ -1,0 +1,17 @@
+# Environment variables / secrets (reserved for Step 7 onward)
+.env
+server/.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Uploaded screenshots are local runtime artifacts - don't commit them
+server/uploads/*
+!server/uploads/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

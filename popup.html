@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Vision Agent</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h2>Privacy-Preserving Vision Agent</h2>
+  <p class="subtitle">Step 1: Page Reader · Step 2: Capture · Step 3: Detection · Step 4: DOM Redaction · Step 5: Screenshot Redaction · Step 6: Send to Server</p>
+
+  <div class="button-row">
+    <button id="analyzeBtn">Analyze Page</button>
+    <button id="captureBtn">Capture Screen</button>
+  </div>
+  <div class="button-row">
+    <button id="detectBtn">Detect Sensitive Data</button>
+  </div>
+  <div class="button-row">
+    <button id="redactBtn">Redact Sensitive Data</button>
+  </div>
+  <div class="button-row">
+    <button id="redactScreenshotBtn">Redact Screenshot</button>
+  </div>
+  <div class="button-row">
+    <button id="sendSafeBtn">Send Safe Screenshot</button>
+  </div>
+  <div class="button-row">
+    <button id="analyzeSafeBtn" style="flex:1;padding:8px;color:white;border:none;border-radius:6px;font-size:13px;cursor:pointer;background-color:#0f5fa6;">Analyze Safe Screenshot</button>
+  </div>
+
+  <div id="results">
+    <p class="placeholder">Click "Analyze Page" to see what's on this page.</p>
+  </div>
+
+  <div id="screenshotContainer">
+    <p class="placeholder">Click "Capture Screen" to take a screenshot of this tab.</p>
+  </div>
+
+  <div id="sensitiveContainer">
+    <p class="placeholder">Click "Detect Sensitive Data" to scan this page's form fields locally (nothing leaves your browser).</p>
+  </div>
+
+  <div id="redactionContainer">
+    <p class="placeholder">Click "Redact Sensitive Data" to black out the detected fields directly on the page.</p>
+  </div>
+
+  <div id="screenshotRedactionContainer">
+    <p class="placeholder">Click "Redact Screenshot" to capture a screenshot and black out sensitive areas on the image itself (nothing leaves your browser).</p>
+  </div>
+
+  <div id="sendStatusContainer">
+    <p class="placeholder">Run "Redact Screenshot" first, then click "Send Safe Screenshot" to upload only the redacted image to your local server (never the original).</p>
+  </div>
+
+  <div id="analysisContainer">
+    <p class="placeholder">Run "Redact Screenshot" first, then click "Analyze Safe Screenshot" to send only the redacted image to Gemini for a structured page analysis.</p>
+  </div>
+
+  <!-- popup.js contains the logic that runs when we click the buttons -->
+  <script src="popup.js"></script>
+</body>
+</html>
